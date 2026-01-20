@@ -74,15 +74,39 @@ You can also combine presets with individual tools:
 | wiki.v2.space.getNode | Get Wiki node | ✓ | ✓ | | | | ✓ | | |
 | wiki.v1.node.search | Search Wiki nodes | | ✓ | | | | ✓ | | |
 | contact.v3.user.batchGetId | Batch get user IDs | ✓ | ✓ | | | | | | |
-| task.v2.task.create | Create task | | | | | | | ✓ | |
-| task.v2.task.patch | Modify task | | | | | | | ✓ | |
-| task.v2.task.addMembers | Add task members | | | | | | | ✓ | |
-| task.v2.task.addReminders | Add task reminders | | | | | | | ✓ | |
-| calendar.v4.calendarEvent.create | Create calendar event | | | | | | | | ✓ |
-| calendar.v4.calendarEvent.patch | Modify calendar event | | | | | | | | ✓ |
-| calendar.v4.calendarEvent.get | Get calendar event | | | | | | | | ✓ |
-| calendar.v4.freebusy.list | Query free/busy status | | | | | | | | ✓ |
-| calendar.v4.calendar.primary | Get primary calendar | | | | | | | | ✓ |
+| **Task Tools** | | | | | | | | | |
+| task.v2.task.create | Create task | | ✓ | | | | | ✓ | |
+| task.v2.task.get | Get task details | | ✓ | | | | | ✓ | |
+| task.v2.task.list | List tasks | | ✓ | | | | | ✓ | |
+| task.v2.task.patch | Modify task | | ✓ | | | | | ✓ | |
+| task.v2.task.delete | Delete task | | ✓ | | | | | ✓ | |
+| task.v2.task.addMembers | Add task members | | ✓ | | | | | ✓ | |
+| task.v2.task.removeMembers | Remove task members | | ✓ | | | | | ✓ | |
+| task.v2.task.addReminders | Add task reminders | | ✓ | | | | | ✓ | |
+| task.v2.task.removeReminders | Remove task reminders | | ✓ | | | | | ✓ | |
+| task.v2.tasklist.create | Create tasklist | | ✓ | | | | | ✓ | |
+| task.v2.tasklist.get | Get tasklist details | | ✓ | | | | | ✓ | |
+| task.v2.tasklist.list | List tasklists | | ✓ | | | | | ✓ | |
+| task.v2.tasklist.patch | Modify tasklist | | ✓ | | | | | ✓ | |
+| task.v2.tasklist.tasks | Get tasks in tasklist | | ✓ | | | | | ✓ | |
+| task.v2.taskSubtask.create | Create subtask | | ✓ | | | | | ✓ | |
+| task.v2.taskSubtask.list | List subtasks | | ✓ | | | | | ✓ | |
+| task.v2.comment.create | Create task comment | | ✓ | | | | | ✓ | |
+| task.v2.comment.list | List task comments | | ✓ | | | | | ✓ | |
+| **Calendar Tools** | | | | | | | | | |
+| calendar.v4.calendar.primary | Get primary calendar | | ✓ | | | | | | ✓ |
+| calendar.v4.calendar.get | Get calendar details | | ✓ | | | | | | ✓ |
+| calendar.v4.calendar.list | List calendars | | ✓ | | | | | | ✓ |
+| calendar.v4.calendar.search | Search calendars | | ✓ | | | | | | ✓ |
+| calendar.v4.calendarEvent.create | Create calendar event | | ✓ | | | | | | ✓ |
+| calendar.v4.calendarEvent.get | Get calendar event | | ✓ | | | | | | ✓ |
+| calendar.v4.calendarEvent.list | List calendar events | | ✓ | | | | | | ✓ |
+| calendar.v4.calendarEvent.patch | Modify calendar event | | ✓ | | | | | | ✓ |
+| calendar.v4.calendarEvent.delete | Delete calendar event | | ✓ | | | | | | ✓ |
+| calendar.v4.calendarEvent.search | Search calendar events | | ✓ | | | | | | ✓ |
+| calendar.v4.calendarEventAttendee.create | Add event attendees | | ✓ | | | | | | ✓ |
+| calendar.v4.calendarEventAttendee.list | List event attendees | | ✓ | | | | | | ✓ |
+| calendar.v4.freebusy.list | Query free/busy status | | ✓ | | | | | | ✓ |
 
 > **Note**: In the table, "✓" indicates the tool is included in that preset. Using `-t preset.xxx` will enable tools marked with "✓" in the corresponding column.
 
@@ -92,7 +116,7 @@ You can also combine presets with individual tools:
 A minimal preset that includes only the most essential tools for basic messaging and document operations. Ideal for lightweight integrations.
 
 ### preset.default (Default)
-The default preset that includes commonly used tools across messaging, documents, databases, and collaboration. Recommended for most users.
+The default preset that includes commonly used tools across messaging, documents, databases, collaboration, **task management, and calendar scheduling**. Recommended for most users. This preset now includes comprehensive Task and Calendar tools for complete productivity integration.
 
 ### preset.im.default
 Focused on instant messaging functionality, including chat creation, member management, and message handling.
@@ -107,10 +131,19 @@ Specialized for batch operations on BitTable data, useful for bulk data processi
 Document-focused preset including document reading, importing, searching, and collaboration features.
 
 ### preset.task.default
-Task management focused preset for creating, modifying, and managing tasks with reminders and members.
+Comprehensive task management preset including:
+- Task CRUD operations (create, read, update, delete)
+- Task member and reminder management
+- Tasklist management (create, list, organize tasks)
+- Subtask support
+- Task comments
 
 ### preset.calendar.default
-Calendar management preset for creating, modifying events, and querying availability.
+Comprehensive calendar management preset including:
+- Calendar operations (get primary calendar, list, search)
+- Event CRUD operations (create, read, update, delete, search)
+- Event attendee management
+- Free/busy status queries
 
 ## Related Documentation
 

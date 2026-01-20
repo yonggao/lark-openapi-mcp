@@ -92,18 +92,49 @@ export const presetDocToolNames: ToolName[] = [
 ];
 
 export const presetTaskToolNames: ToolName[] = [
+  // Task CRUD
   'task.v2.task.create',
+  'task.v2.task.get',
+  'task.v2.task.list',
   'task.v2.task.patch',
+  'task.v2.task.delete',
+  // Task members and reminders
   'task.v2.task.addMembers',
+  'task.v2.task.removeMembers',
   'task.v2.task.addReminders',
+  'task.v2.task.removeReminders',
+  // Tasklist management
+  'task.v2.tasklist.create',
+  'task.v2.tasklist.get',
+  'task.v2.tasklist.list',
+  'task.v2.tasklist.patch',
+  'task.v2.tasklist.tasks',
+  // Subtasks
+  'task.v2.taskSubtask.create',
+  'task.v2.taskSubtask.list',
+  // Comments
+  'task.v2.comment.create',
+  'task.v2.comment.list',
 ];
 
 export const presetCalendarToolNames: ToolName[] = [
-  'calendar.v4.calendarEvent.create',
-  'calendar.v4.calendarEvent.patch',
-  'calendar.v4.calendarEvent.get',
-  'calendar.v4.freebusy.list',
+  // Calendar management
   'calendar.v4.calendar.primary',
+  'calendar.v4.calendar.get',
+  'calendar.v4.calendar.list',
+  'calendar.v4.calendar.search',
+  // Calendar events CRUD
+  'calendar.v4.calendarEvent.create',
+  'calendar.v4.calendarEvent.get',
+  'calendar.v4.calendarEvent.list',
+  'calendar.v4.calendarEvent.patch',
+  'calendar.v4.calendarEvent.delete',
+  'calendar.v4.calendarEvent.search',
+  // Event attendees
+  'calendar.v4.calendarEventAttendee.create',
+  'calendar.v4.calendarEventAttendee.list',
+  // Free/busy
+  'calendar.v4.freebusy.list',
 ];
 
 export const defaultToolNames: ToolName[] = [
@@ -111,6 +142,8 @@ export const defaultToolNames: ToolName[] = [
   ...presetBaseToolNames,
   ...presetDocToolNames,
   ...presetContactToolNames,
+  ...presetTaskToolNames,
+  ...presetCalendarToolNames,
 ];
 
 export const presetTools: Record<PresetName, ToolName[]> = {
